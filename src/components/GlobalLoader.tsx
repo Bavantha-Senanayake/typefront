@@ -1,7 +1,11 @@
 import { useAppSelector } from '../store/hooks';
 
 export const GlobalLoader = () => {
-  const { loading } = useAppSelector((state) => state.user);
+  const userLoading = useAppSelector((state) => state.user.loading);
+  const fabricLoading = useAppSelector((state) => state.fabric.loading);
+  const issuedLoading = useAppSelector((state) => state.issued.loading);
+  
+  const loading = userLoading || fabricLoading || issuedLoading;
 
   if (!loading) return null;
 

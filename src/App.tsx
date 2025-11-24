@@ -7,6 +7,7 @@ import { Home } from './pages/Home.tsx';
 import { Users } from './pages/Users.tsx';
 import { About } from './pages/About.tsx';
 import { Contact } from './pages/Contact.tsx';
+import { Fabrics } from './pages/Fabrics.tsx';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
               <Route path="/users" element={<Users />} />
               <Route path="/about" element={<About />} />
               <Route path="/contact" element={<Contact />} />
+              <Route path="/fabrics" element={<Fabrics />} />
             </Routes>
           </div>
         </div>
